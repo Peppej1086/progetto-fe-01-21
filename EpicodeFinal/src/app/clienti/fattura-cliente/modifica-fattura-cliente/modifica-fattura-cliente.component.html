@@ -1,0 +1,27 @@
+<h2>{{title}}</h2>
+<div  *ngIf="fatturaDaModificare != null">
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Data*</label>
+        <input type="date" class="form-control" id="date" name="date" [(ngModel)]="fatturaDaModificare.date">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Numero*</label>
+        <input type="number" class="form-control" id="formGroupExampleInput2" name="numero" [(ngModel)]="fatturaDaModificare.numero">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput3" class="form-label">Anno*</label>
+        <input type="number" class="form-control" id="formGroupExampleInput3" name="anno" [(ngModel)]="fatturaDaModificare.anno">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput4" class="form-label">Importo*</label>
+        <input type="number" class="form-control" id="formGroupExampleInput4" name="importo" [(ngModel)]="fatturaDaModificare.importo">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Stato</label><br>
+          <select class="form-control" id="exampleFormControlSelect2" name="stato" [(ngModel)]="fatturaDaModificare.stato.nome">
+            <option value="PAGATA">PAGATA</option>
+            <option value="NON PAGATA">NON PAGATA</option>
+          </select>
+      </div>
+      <button type="button" class="btn btn-success" (click)="salvaModifiche()">Salva</button>
+</div>

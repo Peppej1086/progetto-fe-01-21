@@ -1,0 +1,73 @@
+<h2>{{title}}</h2>
+<div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Ragione Sociale*</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="ragioneSociale" [(ngModel)]="nuovoCliente.ragioneSociale">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Partita IVA*</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" name="partitaIva" [(ngModel)]="nuovoCliente.partitaIva">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput3" class="form-label">Tipo Cliente*</label>
+        <select class="form-control" id="exampleFormControlSelect2" name="tipoCliente" [(ngModel)]="nuovoCliente.tipoCliente">
+          <option value="SRL">SRL</option>
+          <option value="SPA">SPA</option>
+          <option value="SAS">SAS</option>
+          <option value="PA">PA</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput4" class="form-label">Email*</label>
+        <input type="email" class="form-control" id="formGroupExampleInput4" name="email" [(ngModel)]="nuovoCliente.email">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput5" class="form-label">PEC*</label>
+        <input type="email" class="form-control" id="formGroupExampleInput5" name="pec" [(ngModel)]="nuovoCliente.pec">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput6" class="form-label">Telefono*</label>
+        <input type="text" class="form-control" id="formGroupExampleInput6" name="telefono" [(ngModel)]="nuovoCliente.telefono">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput7" class="form-label">Nome Contatto*</label>
+        <input type="text" class="form-control" id="formGroupExampleInput7" name="nomeContatto" [(ngModel)]="nuovoCliente.nomeContatto">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput8" class="form-label">Cognome Contatto*</label>
+        <input type="text" class="form-control" id="formGroupExampleInput8" name="cognomeContatto" [(ngModel)]="nuovoCliente.cognomeContatto">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput9" class="form-label">Telefono Contatto*</label>
+        <input type="text" class="form-control" id="formGroupExampleInput9" name="telefonoContatto" [(ngModel)]="nuovoCliente.telefonoContatto">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput10" class="form-label">Email Contatto*</label>
+        <input type="email" class="form-control" id="formGroupExampleInput10" name="emailContatto" [(ngModel)]="nuovoCliente.emailContatto">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput11" class="form-label">Indirizzo*</label>
+        <input type="text" class="form-control" id="formGroupExampleInput11" name="indirizzo" [(ngModel)]="nuovoCliente.indirizzoSedeOperativa.via">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput12" class="form-label">Numero civico*</label>
+        <input type="number" class="form-control" id="formGroupExampleInput12" name="civico" [(ngModel)]="nuovoCliente.indirizzoSedeOperativa.civico">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput13" class="form-label">CAP*</label>
+        <input type="number" class="form-control" id="formGroupExampleInput13" name="cap" [(ngModel)]="nuovoCliente.indirizzoSedeOperativa.cap">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput14" class="form-label">Località*</label>
+        <input type="text" class="form-control" id="formGroupExampleInput14" name="localita" [(ngModel)]="nuovoCliente.indirizzoSedeOperativa.localita">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput15" class="form-label">Comune*</label>
+        <input type="text" class="form-control" id="formGroupExampleInput15" name="comune" [(ngModel)]="nuovoCliente.indirizzoSedeOperativa.comune.nome">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput16" class="form-label">Provincia*</label>
+        <input type="text" class="form-control" id="formGroupExampleInput16" name="provincia" [(ngModel)]="nuovoCliente.indirizzoSedeOperativa.comune.provincia.nome">
+      </div>
+      <button type="button" class="btn btn-success" (click)="clientiService.aggiungiCliente(nuovoCliente)">Aggiungi</button>
+</div>

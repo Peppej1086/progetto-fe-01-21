@@ -1,0 +1,19 @@
+<h3>{{title}}</h3>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of utenti.content">
+        <th scope="row">{{u.id}}</th>
+        <td>{{u.username}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.password}}</td>
+      </tr>
+    </tbody>
+  </table>

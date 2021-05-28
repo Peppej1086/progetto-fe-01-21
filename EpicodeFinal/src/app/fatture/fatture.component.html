@@ -1,0 +1,43 @@
+<h3>{{title}}</h3>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Data</th>
+        <th scope="col">Numero</th>
+        <th scope="col">Anno</th>
+        <th scope="col">Importo</th>
+        <th scope="col">Stato</th>
+        <th scope="col">Cliente</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let f of fatture.content">
+        <th scope="row">{{f.id}}</th>
+        <td>{{f.data}}</td>
+        <td>{{f.numero}}</td>
+        <td>{{f.anno}}</td>
+        <td>{{f.importo}}</td>
+        <td>{{f.stato.nome}}</td>
+        <td>{{f.cliente.ragioneSociale}}</td>
+        <td><button class="btn btn-warning" routerLink="fatture/modifica/{{f.id}}">Modifica</button></td>
+        <td><button class="btn btn-danger" routerLink="fatture/elimina/{{f.id}}">Elimina</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-container *ngIf="fatture.content">
+    <ngb-pagination
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="fatture.totalElements"
+    (pageChange)="myPageChange($event)"
+    [boundaryLinks]="true"
+    [maxSize]="10"
+     [rotate]="true" 
+     [ellipses]="false" 
+     [boundaryLinks]="true">
+    >
+    </ngb-pagination>
+  </ng-container>

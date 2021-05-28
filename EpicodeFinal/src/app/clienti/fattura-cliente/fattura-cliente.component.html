@@ -1,0 +1,33 @@
+<h2>{{title}}</h2>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Data</th>
+        <th scope="col">Numero</th>
+        <th scope="col">Anno</th>
+        <th scope="col">Importo</th>
+        <th scope="col">Stato</th>
+        <th scope="col"><button class="btn btn-success" routerLink="/clienti/fattura/nuova">Aggiungi</button></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of idListaFattura | slice: (page-1) * pageSize : page * pageSize">
+        <th scope="row">{{i.id}}</th>
+        <td>{{i.data}}</td>
+        <td>{{i.numero}}</td>
+        <td>{{i.anno}}</td>
+        <td>{{i.importo}}</td>
+        <td>{{i.stato.nome}}</td>
+        <td><button class="btn btn-warning" routerLink="/clienti/fattura/modifica/{{i.id}}">Modifica</button></td>
+        <td><button class="btn btn-danger" routerLink="/clienti/fattura/elimina/{{i.id}}">Elimina</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-container *ngIf="idListaFattura">
+    <ngb-pagination
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="idListaFattura.length"></ngb-pagination>
+  </ng-container>

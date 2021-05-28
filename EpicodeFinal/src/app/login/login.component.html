@@ -1,0 +1,12 @@
+<h2>{{title}}</h2>
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="text" class="form-control" name="username" [(ngModel)]="user.username">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" [(ngModel)]="user.password">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="loggedUser(user)">Login</button>
+  </form>
