@@ -7,7 +7,7 @@ import { ClientiServiceService } from '../services/clienti-service.service';
   styleUrls: ['./clienti.component.css']
 })
 export class ClientiComponent implements OnInit {
-  title = 'Miei Clienti';
+  title = 'Clienti';
   clienti;
   pageSize = 20;
   page = 1;
